@@ -17,6 +17,8 @@
             text-align: center;
             color: white;
             overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
 
         .slideshow-container {
@@ -43,7 +45,7 @@
             background: rgba(0, 0, 0, 0.6); /* Transparent background */
             padding: 30px;
             border-radius: 15px;
-            max-width: 600px;
+            max-width: 90%; /* Make message container a little smaller on mobile */
             color: white;
         }
 
@@ -61,6 +63,44 @@
             margin-top: 30px;
             font-size: 1.5em;
             font-weight: bold;
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .message-container {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            h1 {
+                font-size: 2.5em; /* Adjust title size on smaller screens */
+            }
+
+            p {
+                font-size: 1em; /* Adjust paragraph text size */
+            }
+
+            p:last-child {
+                font-size: 1.2em; /* Adjust last paragraph size */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .message-container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em; /* Even smaller title size on very small screens */
+            }
+
+            p {
+                font-size: 0.9em; /* Smaller text for smaller screens */
+            }
+
+            p:last-child {
+                font-size: 1.1em; /* Adjust final text size */
+            }
         }
     </style>
 </head>
@@ -89,9 +129,9 @@
 
     <div class="message-container">
         <h1>🌹 Happy Birthday, Chime! 🌹</h1>
-        <p>On your special day, I just wanted to remind you how amazing, kind, and inspiring you are. Thank you for being the best friend anyone could ask for, and for filling my life with so many laughs and memories.</p>
+        <p>On your special day, I just wanted to remind you how amazing, kind, and inspiring you are. Thank you for being the best friend anyone could ask for.</p>
         <p>May this year bring you even more joy, adventure, and all the beautiful moments you deserve.</p>
-        <p>Here’s to another year of growth, happiness, and friendship 🌹</p>
+        <p>Here’s to another year of growth, happiness, and friendship 💕</p>
         
     </div>
 
