@@ -23,7 +23,7 @@
     .slideshow-container {
       position: relative;
       width: 100%;
-      height: 100vh; /* full screen height */
+      height: 100vh; /* full screen */
       overflow: hidden;
     }
 
@@ -36,18 +36,18 @@
       left: 0;
     }
 
-    /* === Image styling === */
+    /* === Image Styling === */
     .slide-image {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* fill the screen beautifully */
-      /* If you prefer to show full images (no cropping), use: */
-      /* object-fit: contain; background-color: black; */
+      object-fit: cover; /* fills screen beautifully */
+      /* To show entire image instead of cropping, use:
+         object-fit: contain; background-color: black; */
       filter: brightness(60%);
       transition: opacity 1s ease-in-out;
     }
 
-    /* === Birthday Message Box === */
+    /* === Message Box === */
     .message-container {
       position: absolute;
       top: 50%;
@@ -90,7 +90,7 @@
       to { opacity: 1; }
     }
 
-    /* === Responsive Adjustments === */
+    /* === Responsive Design === */
     @media (max-width: 768px) {
       h1 {
         font-size: 2em;
@@ -119,21 +119,21 @@
 <body>
 
   <div class="slideshow-container">
-    <!-- Slides -->
+    <!-- Your Slides -->
     <div class="mySlides fade">
-      <img src="image1.jpg" alt="Rose" class="slide-image">
+      <img src="Imae.jpg" alt="Rose" class="slide-image">
     </div>
 
     <div class="mySlides fade">
-      <img src="image2.jpg" alt="Birthday" class="slide-image">
+      <img src="image.jpg" alt="Birthday" class="slide-image">
     </div>
 
     <div class="mySlides fade">
-      <img src="image3.jpg" alt="Flowers" class="slide-image">
+      <img src="images.jpg" alt="Flowers" class="slide-image">
     </div>
 
     <div class="mySlides fade">
-      <img src="image4.jpg" alt="Gift" class="slide-image">
+      <img src="img.jpg" alt="Gift" class="slide-image">
     </div>
 
     <!-- Message -->
@@ -156,7 +156,7 @@
       slideIndex++;
       if (slideIndex > slides.length) slideIndex = 1;
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // change every 4 seconds
+      setTimeout(showSlides, 4000); // changes every 4 seconds
     }
 
     showSlides();
