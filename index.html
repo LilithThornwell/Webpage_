@@ -19,32 +19,35 @@
       overflow: hidden;
     }
 
-    /* Slideshow Container */
+    /* === Slideshow Container === */
     .slideshow-container {
       position: relative;
       width: 100%;
-      height: 100vh;
+      height: 100vh; /* full screen height */
       overflow: hidden;
     }
 
-    /* Each slide */
     .mySlides {
       display: none;
+      position: absolute;
       width: 100%;
       height: 100%;
-      position: absolute;
       top: 0;
       left: 0;
     }
 
+    /* === Image styling === */
     .slide-image {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* fill the screen beautifully */
+      /* If you prefer to show full images (no cropping), use: */
+      /* object-fit: contain; background-color: black; */
       filter: brightness(60%);
+      transition: opacity 1s ease-in-out;
     }
 
-    /* Birthday message */
+    /* === Birthday Message Box === */
     .message-container {
       position: absolute;
       top: 50%;
@@ -56,6 +59,7 @@
       width: 90%;
       max-width: 500px;
       color: white;
+      text-align: center;
     }
 
     h1 {
@@ -76,7 +80,7 @@
       font-weight: bold;
     }
 
-    /* Smooth fade animation */
+    /* === Fade Animation === */
     .fade {
       animation: fadeEffect 1s ease-in-out;
     }
@@ -86,7 +90,7 @@
       to { opacity: 1; }
     }
 
-    /* Responsive design */
+    /* === Responsive Adjustments === */
     @media (max-width: 768px) {
       h1 {
         font-size: 2em;
@@ -115,19 +119,24 @@
 <body>
 
   <div class="slideshow-container">
+    <!-- Slides -->
     <div class="mySlides fade">
       <img src="image1.jpg" alt="Rose" class="slide-image">
     </div>
+
     <div class="mySlides fade">
       <img src="image2.jpg" alt="Birthday" class="slide-image">
     </div>
+
     <div class="mySlides fade">
       <img src="image3.jpg" alt="Flowers" class="slide-image">
     </div>
+
     <div class="mySlides fade">
       <img src="image4.jpg" alt="Gift" class="slide-image">
     </div>
 
+    <!-- Message -->
     <div class="message-container">
       <h1>🌹 Happy Birthday, Chime! 🌹</h1>
       <p>On your special day, I just wanted to remind you how amazing, kind, and inspiring you are.</p>
@@ -140,14 +149,14 @@
     let slideIndex = 0;
 
     function showSlides() {
-      let slides = document.getElementsByClassName("mySlides");
+      const slides = document.getElementsByClassName("mySlides");
       for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
       slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
+      if (slideIndex > slides.length) slideIndex = 1;
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // Change slide every 4 seconds
+      setTimeout(showSlides, 4000); // change every 4 seconds
     }
 
     showSlides();
@@ -155,4 +164,3 @@
 
 </body>
 </html>
-
