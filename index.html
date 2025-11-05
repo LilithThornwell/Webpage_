@@ -1,158 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Chime!</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Chime!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #fff;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
 
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: 80vh; /* Adjust the height of the slideshow */
-        }
+    /* Slideshow Container */
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-        .mySlides {
-            display: none;
-        }
+    /* Each slide */
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-        .slide-image {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-        }
+    .slide-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
 
-        .message-container {
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.6); /* Transparent background */
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 90%; /* Make message container a little smaller on mobile */
-            color: white;
-        }
+    /* Birthday message */
+    .message-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 25px 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      color: white;
+    }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
 
-        p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
+    p {
+      font-size: 1.1em;
+      margin: 10px 0;
+      line-height: 1.4;
+    }
 
-        p:last-child {
-            margin-top: 30px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
+    p:last-child {
+      margin-top: 20px;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
 
-        /* Mobile responsiveness */
-        @media screen and (max-width: 768px) {
-            .message-container {
-                padding: 20px;
-                max-width: 90%;
-            }
+    /* Smooth fade animation */
+    .fade {
+      animation: fadeEffect 1s ease-in-out;
+    }
 
-            h1 {
-                font-size: 2.5em; /* Adjust title size on smaller screens */
-            }
+    @keyframes fadeEffect {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
 
-            p {
-                font-size: 1em; /* Adjust paragraph text size */
-            }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      .message-container {
+        padding: 20px 15px;
+      }
+    }
 
-            p:last-child {
-                font-size: 1.2em; /* Adjust last paragraph size */
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .message-container {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 2em; /* Even smaller title size on very small screens */
-            }
-
-            p {
-                font-size: 0.9em; /* Smaller text for smaller screens */
-            }
-
-            p:last-child {
-                font-size: 1.1em; /* Adjust final text size */
-            }
-        }
-    </style>
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6em;
+      }
+      p {
+        font-size: 0.95em;
+      }
+      p:last-child {
+        font-size: 1.1em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="slideshow-container">
-        <!-- Slide 1 -->
-        <div class="mySlides fade">
-            <img src="Imae.jpg" alt="Rose" class="slide-image">
-        </div>
 
-        <!-- Slide 2 -->
-        <div class="mySlides fade">
-            <img src="image.jpg" alt="Birthday" class="slide-image">
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="mySlides fade">
-            <img src="images.jpg" alt="Flowers" class="slide-image">
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="mySlides fade">
-            <img src="img.jpg" alt="Gift" class="slide-image">
-        </div>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="image1.jpg" alt="Rose" class="slide-image">
+    </div>
+    <div class="mySlides fade">
+      <img src="image2.jpg" alt="Birthday" class="slide-image">
+    </div>
+    <div class="mySlides fade">
+      <img src="image3.jpg" alt="Flowers" class="slide-image">
+    </div>
+    <div class="mySlides fade">
+      <img src="image4.jpg" alt="Gift" class="slide-image">
     </div>
 
     <div class="message-container">
-        <h1>🌹 Happy Birthday, Chime! 🌹</h1>
-        <p>On your special day, I just wanted to remind you how amazing, kind, and inspiring you are. Thank you for being the best friend anyone could ask for.</p>
-        <p>May this year bring you even more joy, adventure, and all the beautiful moments you deserve.</p>
-        <p>Here’s to another year of growth, happiness, and friendship 💕</p>
-        
+      <h1>🌹 Happy Birthday, Chime! 🌹</h1>
+      <p>On your special day, I just wanted to remind you how amazing, kind, and inspiring you are.</p>
+      <p>May this year bring you even more joy, adventure, and all the beautiful moments you deserve.</p>
+      <p>Here’s to another year of growth, happiness, and friendship 💕</p>
     </div>
+  </div>
 
-    <script>
-        let slideIndex = 0;
+  <script>
+    let slideIndex = 0;
 
-        function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "block";  
-            setTimeout(showSlides, 3000); // Change slide every 3 seconds
-        }
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change slide every 4 seconds
+    }
 
-        showSlides(); // Start the slideshow
-    </script>
+    showSlides();
+  </script>
+
 </body>
 </html>
 
